@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: core-keysafe-license
+    runtime: python
+    rootDir: license_service
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: GITHUB_TOKEN
+        sync: false
+      - key: GITHUB_REPOSITORY
+        sync: false
+      - key: GITHUB_STORE_PATH
+        value: data/keysafe_store.json
+      - key: GITHUB_BRANCH
+        value: main
+      - key: LICENSE_SIGNING_PRIVATE_KEY
+        sync: false
+      - key: APP_BASE_URL
+        sync: false
+      - key: LICENSE_DAYS
+        value: "365"
+      - key: OFFLINE_GRACE_HOURS
+        value: "72"
