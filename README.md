@@ -1,6 +1,6 @@
 # CORE KeySafe
 
-Lokaler Windows-/Linux-Passwortmanager mit verschlüsseltem Ein-Datei-Tresor und separatem Lizenzdienst. **Es wird keine Datenbank verwendet.** Der Lizenzdienst speichert Lizenzdatensätze und Audit-Metadaten in einer einzelnen JSON-Datei in einem privaten GitHub-Repository über die GitHub Contents API.
+Lokaler Windows-/Linux-Passwortmanager mit verschlüsseltem Ein-Datei-Tresor und separatem Lizenzdienst. Der Lizenzdienst speichert Lizenzdatensätze und Audit-Metadaten in einer einzelnen JSON-Datei in einem privaten GitHub-Repository über die GitHub Contents API.
 
 ## Komponenten
 - `desktop/`: PySide6 Desktop-App, AES-256-GCM, Argon2id, Importordner, Generator und automatische Sperre.
